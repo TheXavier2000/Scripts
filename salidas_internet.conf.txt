@@ -1,0 +1,2136 @@
+FONTDEFINE 100 docs/example/Vera.ttf 10
+
+WIDTH 2150
+HEIGHT 2300
+HTMLSTYLE overlib
+KEYFONT 100
+TITLE Salidas Internet ePoP
+TIMEPOS 1668 20 Created: %b %d %Y %H:%M:%S
+
+KEYPOS DEFAULT 1891 679 Ocupación
+KEYTEXTCOLOR 0 0 0
+KEYOUTLINECOLOR 0 0 0
+KEYBGCOLOR 255 255 255
+BGCOLOR 230 230 230
+TITLECOLOR 0 0 0
+TIMECOLOR 0 0 0
+SCALE DEFAULT 0    0    255   0 255
+SCALE DEFAULT 0    1    175 255 175
+SCALE DEFAULT 1    40   100 255 100
+SCALE DEFAULT 40   80    16 214   0
+SCALE DEFAULT 80   90   255 192   0
+SCALE DEFAULT 90   100  255   0   0
+
+
+# End of global section
+
+
+# TEMPLATE-only NODEs:
+NODE DEFAULT
+        LABELFONT 100
+        MAXVALUE 100
+
+
+# TEMPLATE-only LINKs:
+LINK DEFAULT
+        WIDTH 5
+        BWFONT 100
+        COMMENTFONT 100
+        COMMENTFONTCOLOR 0 0 0
+        BWLABEL bits
+        BANDWIDTH 10G
+
+LINK CX600_NEV_1-NE40_NEV_2
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=85782
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=85782&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        TARGET /var/www/html/cacti/rra/cn_hw_cx60_hu_nev_2_traffic_in_88554.rrd
+
+LINK sw-nev-s632-sg9100-nev
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91491
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91491&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_94272.rrd
+        VIA 1430 1250
+        VIA 920 1250
+
+LINK CX600_NEV_1-NE40_NEV_1aaaa
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=89869
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=89869&rra_id=0&graph_nolegend=true&graph_height=150&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_1_traffic_in_92673.rrd
+        INCOMMENT 0/0/0/9
+        OUTCOMMENT GE0/1/1
+
+LINK NE40_VVC_2-node02218
+        VIASTYLE angled
+        COMMENTPOS 70 30
+        INCOMMENT GE2/1/0
+        OUTCOMMENT Net 0
+        VIA 850 2380
+
+
+# regular NODEs:
+NODE NE40_TUN_1
+        LABEL RP180TUNDOR
+        ICON images/small-ne8000x4.PNG
+        LABELOFFSET 0 60
+        POSITION 70 400
+
+NODE facebook
+        LABEL feyp1-1 CDN 60 Gbps
+        ICON images/provider-facebook.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 150
+
+NODE sw-tun-s632
+        LABEL SWS632_BY_TUN_1
+        ICON images/small_s632.png
+        LABELOFFSET 0 30
+        POSITION 1450 430
+
+NODE NE40_NEV_1
+        LABEL RP182NEVDOR
+        ICON images/small-fiberhome.PNG
+        LABELOFFSET 0 70
+        POSITION 70 1000
+
+NODE NE40_NEV_2
+        LABEL BR161NEVDOR
+        ICON images/small_ne40.jpg
+        LABELOFFSET 0 70
+        POSITION 850 1000
+
+NODE sw-nev-s632
+        LABEL SWS632_HU_NEV_1
+        ICON images/small_s632.png
+        LABELOFFSET 0 30
+        POSITION 1470 1080
+
+NODE sw-pas-s632
+        LABEL SW167PASDOR
+        ICON images/small_s632.png
+        LABELOFFSET 0 30
+        POSITION 1450 1700
+
+NODE facebook_NEV
+        LABEL fnva1-1 CDN 70 Gbps
+        ICON images/provider-facebook.jpg
+        LABELOFFSET 0 30
+        POSITION 1400 1240
+
+NODE googlecdn_nev
+        LABEL azteca-nva1 CDN 23 Gbps
+        ICON images/provider-google.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 1130
+
+NODE facebook_pas
+        LABEL fpso1-1 CDN 50 Gbps
+        ICON images/provider-facebook.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 1800
+
+NODE googlecdn_pas
+        LABEL azteca-pso1 CDN 23 Gbps
+        ICON images/provider-google.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 1690
+
+NODE century_nev
+        LABEL ID:81-1YTLMTE 30 Gbps - Burst 10G
+        ICON images/provider-cirion.PNG
+        LABELOFFSET 0 30
+        POSITION 1900 900
+
+NODE globenet_tun
+        LABEL ACC9292IP#8_015G 15 Gbps - Burst 10G
+        ICON images/provider-vtal.png
+        LABELOFFSET 0 30
+        POSITION 1900 350
+
+NODE googlecdntun
+        LABEL azteca-sox1 CDN 23 Gbps
+        ICON images/provider-google.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 520
+
+NODE PE165NEVDOR
+        LABEL PE165NEVDOR
+        ICON images/small-zte-m6000.PNG
+        LABELOFFSET 0 40
+        POSITION 450 1000
+
+NODE PE165PASDOR
+        LABEL PE165PASDOR
+        ICON images/small-zte-m6000.PNG
+        LABELOFFSET 0 40
+        POSITION 450 1600
+
+NODE iris
+        LABEL DNS Iris
+        ICON images/small_dns_hp.PNG
+        LABELOFFSET 0 30
+        POSITION 1900 1050
+
+NODE PE165TUNDOR
+        LABEL PE165TUNDOR
+        ICON images/small-zte-m6000.PNG
+        LABELOFFSET 0 40
+        POSITION 450 400
+
+NODE node02698
+        LABEL azteca-nva2 CDN 31 Gbps
+        ICON images/provider-google.jpg
+        LABELOFFSET 0 30
+        POSITION 1900 1240
+
+NODE cirion_pas
+        LABEL ID:81-3F6L7PP 15Gbps - 10Gbps burst
+        ICON images/provider-cirion.PNG
+        LABELOFFSET 0 30
+        POSITION 1900 1500
+
+NODE RP142PASDOR
+        LABEL RP142PASDOR
+        ICON images/small-ne40-x2.PNG
+        LABELOFFSET 0 40
+        POSITION 70 1600
+
+NODE BR142PASDOR
+        LABEL BR142PASDOR
+        ICON images/small_ne40.jpg
+        LABELOFFSET 0 70
+        POSITION 850 1600
+
+NODE BR142TUNDOR
+        LABEL BR142TUNDOR
+        ICON images/small_ne40.jpg
+        LABELOFFSET 0 70
+        POSITION 850 400
+
+NODE speddtest
+        LABEL speedtest
+        ICON images/small-dnshp.PNG
+        POSITION 1770 820
+
+
+# regular LINKs:
+LINK IG_ER_SS12_CU_BOG_WBP_1_copy-GlobenetP1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91456
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91456&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        BWLABELPOS 65 35
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94237.rrd
+        INCOMMENT 0/0/1
+        OUTCOMMENT GE1/0/2
+        NODES BR142TUNDOR:20:15 facebook:-50:20
+        VIA 870 210
+        VIA 1815 210
+
+LINK Eth-Trunk1-01
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109550
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109550&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112383.rrd
+        INCOMMENT 0/0/1/6
+        OUTCOMMENT 25GE1/0/9
+        NODES NE40_TUN_1:0:0 PE165TUNDOR:0:0
+        VIA 150 385
+        VIA 380 385
+
+LINK CR_HW_NE40_AT_PCO_1-CR_HW_NE40_AT_PCO_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109551
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109551&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112384.rrd
+        INCOMMENT 0/0/1/5
+        OUTCOMMENT 25GE1/0/10
+        NODES NE40_TUN_1:0:0 PE165TUNDOR:0:0
+        VIA 150 415
+        VIA 380 415
+
+LINK CR_HW_NE40_AT_PCO_1-CR_HW_NE40_AT_PCO_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109554
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109554&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112387.rrd
+        INCOMMENT 0/0/1/8
+        OUTCOMMENT 25GE1/0/13
+        NODES NE40_TUN_1:0:0 PE165TUNDOR:0:0
+        VIA 150 445
+        VIA 380 445
+
+LINK IGW_PCO-googlePCO
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91469
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91469&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94250.rrd
+        OUTCOMMENT XGE0/0/5
+        NODES sw-tun-s632:0:0 googlecdntun:-20:-10
+        VIA 1500 490
+        VIA 1770 490
+        BANDWIDTH 7.66G
+
+LINK IGW_PCO-googlePCOa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91468
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91468&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94249.rrd
+        OUTCOMMENT XGE0/0/6
+        NODES sw-tun-s632:0:0 googlecdntun:0:0
+        VIA 1500 520
+        BANDWIDTH 7.66G
+
+LINK NE40_PCO_1-NE40_PCO_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109553
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109553&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112386.rrd
+        INCOMMENT 0/0/1/7
+        OUTCOMMENT 25GE1/0/12
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 355
+        VIA 380 355
+
+LINK IGW_PCO-CX600_TUN_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91463
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91463&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94244.rrd
+        INCOMMENT 0/0/0/6
+        OUTCOMMENT GE1/0/4
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 415
+        VIA 500 415
+
+LINK IGW_PCO-CX600_TUN_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91452
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91452&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94233.rrd
+        INCOMMENT 0/0/0/5
+        OUTCOMMENT GE2/0/0
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 355
+        VIA 500 355
+
+LINK IGW_PCO-CX600_TUN_1aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91461
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91461&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94242.rrd
+        INCOMMENT 0/0/0/9
+        OUTCOMMENT GE1/0/0
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 445
+        VIA 500 445
+
+LINK IGW_PCO-CX600_TUN_1aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91460
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91460&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94241.rrd
+        INCOMMENT 0/0/0/7
+        OUTCOMMENT GE2/0/4
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 325
+        VIA 500 325
+
+LINK NE40_TUN_2-facebook
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91453
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91453&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94234.rrd
+        INCOMMENT 0/0/2
+        OUTCOMMENT GE2/0/2
+        NODES BR142TUNDOR:20:-15 facebook:-50:0
+        VIA 870 150
+
+LINK CX600_NEV_1-NE40_NEV_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97245
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97245&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99995.rrd
+        INCOMMENT 0/0/1/4
+        OUTCOMMENT 0/1/0/32
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 855
+        VIA 380 855
+
+LINK CX600_NEV_1-NE40_NEV_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97247
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97247&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99997.rrd
+        INCOMMENT 0/0/1/6
+        OUTCOMMENT 0/6/0/26
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 885
+        VIA 380 885
+
+LINK CX600_NEV_1-NE40_NEV_1aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111530
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111530&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114383.rrd
+        INCOMMENT 0/2/0/1
+        OUTCOMMENT 0/6/0/28
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 915
+        VIA 380 915
+
+LINK CX600_NEV_1-NE40_NEV_1aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111531
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111531&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114384.rrd
+        INCOMMENT 0/2/0/2
+        OUTCOMMENT 0/6/0/29
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 945
+        VIA 380 945
+
+LINK NE40_NEV_2-CX600_NEV_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97246
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97246&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99996.rrd
+        INCOMMENT GE2/0/4
+        OUTCOMMENT 0/0/1/5
+        NODES PE165NEVDOR NE40_NEV_2:0:0
+        VIA 520 855
+        VIA 780 855
+
+LINK NE40_NEV_2-CX600_NEV_1aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97242
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97242&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99992.rrd
+        INCOMMENT GE1/0/4
+        OUTCOMMENT 0/0/1/1
+        NODES PE165NEVDOR NE40_NEV_2:0:0
+        VIA 520 1025
+        VIA 780 1025
+
+LINK sg9100-tun-sw-tun-s632aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91464
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91464&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94245.rrd
+        INCOMMENT GE4/0/0
+        OUTCOMMENT XGE0/0/1
+        NODES sw-tun-s632 BR142TUNDOR
+        VIA 1420 490
+        VIA 920 490
+
+LINK sg9100-tun-sw-tun-s632aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91465
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91465&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94246.rrd
+        INCOMMENT GE1/0/1
+        OUTCOMMENT XGE0/0/2
+        NODES sw-tun-s632 BR142TUNDOR
+        VIA 1420 520
+        VIA 920 520
+
+LINK sg9100-nev-NE40_NEV_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91478
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91478&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94259.rrd
+        INCOMMENT GE 2/0/2
+        NODES century_nev NE40_NEV_2
+        VIA 1830 950
+        VIA 915 950
+
+LINK facebook_NEV-NE40_NEV_2
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91484
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91484&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94265.rrd
+        INCOMMENT Pto2
+        OUTCOMMENT GE2/1/0
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1240
+        VIA 1315 1240
+
+LINK facebook_NEV-NE40_NEV_2a
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91482
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91482&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94263.rrd
+        INCOMMENT Pto1
+        OUTCOMMENT GE1/1/0
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1210
+        VIA 1315 1210
+
+LINK sw-nev-s632-sg9100-neva
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91477
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91477&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94258.rrd
+        INCOMMENT XG0/0/44
+        OUTCOMMENT GE2/0/0
+        NODES NE40_NEV_2:20:0 sw-nev-s632
+        VIA 870 1090
+        VIA 930 1090
+        VIA 930 1120
+        VIA 1320 1120
+        VIA 1320 1080
+
+LINK googlecdn_nev-sw-nev-s632
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91489
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91489&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_94270.rrd
+        OUTCOMMENT XG0/0/45
+        NODES sw-nev-s632:90:0 googlecdn_nev:0:-10
+        VIA 1560 1120
+
+LINK googlecdn_nev-sw-nev-s632a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91490
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91490&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_94271.rrd
+        OUTCOMMENT XG0/0/46
+        NODES sw-nev-s632:90:0 googlecdn_nev:0:20
+        VIA 1560 1150
+
+LINK CX600_PAS_1-NE40_PAS_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92462
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92462&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95216.rrd
+        INCOMMENT 0/0/1/6
+        OUTCOMMENT GE0/2/6
+        NODES RP142PASDOR:0:-15 PE165PASDOR
+        VIA 370 1585
+
+LINK CX600_PAS_1-NE40_PAS_1aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=89917
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=89917&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_92721.rrd
+        INCOMMENT 0/0/0/2
+        OUTCOMMENT GE0/2/2
+        NODES RP142PASDOR:0:15 PE165PASDOR
+        VIA 370 1615
+
+LINK CX600_PAS_1-NE40_PAS_1aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=89920
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=89920&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_92724.rrd
+        INCOMMENT 0/0/1/2
+        OUTCOMMENT GE0/3/2
+        NODES RP142PASDOR:0:45 PE165PASDOR
+        VIA 370 1645
+
+LINK NE40_PAS_2-CX600_PAS_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92418
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92418&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95192.rrd
+        INCOMMENT GE1/0/3
+        OUTCOMMENT 0/0/0/4
+        NODES PE165PASDOR BR142PASDOR:0:-45
+        VIA 500 1555
+
+LINK NE40_PAS_2-CX600_PAS_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91499
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91499&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94280.rrd
+        INCOMMENT GE7/0/0
+        OUTCOMMENT 0/0/1/3
+        NODES PE165PASDOR BR142PASDOR:0:-15
+        VIA 500 1585
+
+LINK NE40_PAS_2-CX600_PAS_1aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92419
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92419&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95193.rrd
+        INCOMMENT GE7/0/3
+        OUTCOMMENT 0/0/1/4
+        NODES PE165PASDOR BR142PASDOR:0:15
+        VIA 500 1615
+
+LINK NE40_PAS_2-CX600_PAS_1aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92420
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92420&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95194.rrd
+        INCOMMENT GE8/0/0
+        OUTCOMMENT 0/0/1/7
+        NODES PE165PASDOR BR142PASDOR:0:45
+        VIA 500 1645
+
+LINK sw-pas-s632-sg9100-pas-3
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91500
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91500&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94281.rrd
+        INCOMMENT GE70/0/1
+        OUTCOMMENT XG0/0/5
+        NODES sw-pas-s632 BR142PASDOR
+        VIA 1430 1690
+        VIA 920 1690
+
+LINK sw-pas-s632-sg9100-pas-4
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91497
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91497&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94278.rrd
+        INCOMMENT GE1/0/1
+        OUTCOMMENT XGE0/0/6
+        NODES sw-pas-s632 BR142PASDOR
+        VIA 1430 1660
+        VIA 920 1660
+
+LINK facebook_pas-NE40_PAS_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91494
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91494&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94275.rrd
+        INCOMMENT Pto1
+        OUTCOMMENT GE1/1/0
+        NODES BR142PASDOR:20:0 facebook_pas:0:-15
+        VIA 870 1785
+
+LINK facebook_pas-NE40_PAS_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91495
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91495&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94276.rrd
+        INCOMMENT Pto2
+        OUTCOMMENT GE7/1/0
+        NODES BR142PASDOR:20:0 facebook_pas:0:15
+        VIA 870 1815
+
+LINK sw-pas-s632-googlecdn_pas
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109742
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109742&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw167pasdor_traffic_in_112579.rrd
+        OUTCOMMENT XG0/0/8
+        NODES sw-pas-s632 googlecdn_pas:0:0
+        VIA 1530 1690
+
+LINK sw-pas-s632-googlecdn_pasa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109741
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109741&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/sw167pasdor_traffic_in_112578.rrd
+        OUTCOMMENT XG0/0/7
+        NODES sw-pas-s632 googlecdn_pas:0:-10
+        VIA 1540 1660
+        VIA 1822 1660
+
+LINK NE40_TUN_2-CX600_TUN_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91756
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91756&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94537.rrd
+        INCOMMENT 0/0/0/10
+        OUTCOMMENT GE2/0/1
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 475
+        VIA 500 475
+
+LINK NE40_TUN_2-CX600_TUN_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91752
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91752&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94533.rrd
+        INCOMMENT 0/0/0/8
+        OUTCOMMENT GE1/1/0
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 385
+        VIA 500 385
+
+LINK NE40_TUN_2-facebooka
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91755
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91755&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94536.rrd
+        INCOMMENT 0/0/3
+        OUTCOMMENT GE1/1/1
+        NODES BR142TUNDOR:20:-15 facebook:-50:-20
+        VIA 870 120
+        VIA 1815 120
+
+LINK NE40_TUN_2-facebookaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91754
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91754&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94535.rrd
+        INCOMMENT 0/0/4
+        OUTCOMMENT GE4/0/1
+        NODES BR142TUNDOR:20:-15 facebook:-50:20
+        VIA 870 180
+        VIA 1815 180
+
+LINK NE40_TUN_1-CX600_TUN_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109552
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109552&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112385.rrd
+        INCOMMENT 0/0/1/9
+        OUTCOMMENT 25GE1/0/11
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 475
+        VIA 380 475
+
+LINK NE40_TUN_1-CX600_TUN_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109555
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109555&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112388.rrd
+        INCOMMENT 0/0/1/10
+        OUTCOMMENT 25GE1/0/14
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 325
+        VIA 380 325
+
+LINK NE40_NEV_2-CX600_NEV_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108112
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108112&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110930.rrd
+        INCOMMENT GE5/0/3
+        OUTCOMMENT 0/0/1/8
+        NODES PE165NEVDOR NE40_NEV_2:0:0
+        VIA 520 885
+        VIA 780 885
+
+LINK facebook_NEV-NE40_NEV_2aa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91787
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91787&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94568.rrd
+        INCOMMENT Pto4
+        OUTCOMMENT GE2/0/3
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1300
+        VIA 1315 1300
+
+LINK facebook_NEV-NE40_NEV_2aaa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91788
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91788&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94569.rrd
+        INCOMMENT Pto3
+        OUTCOMMENT GE1/1/2
+        NODES NE40_NEV_2 facebook_NEV:0:0
+        VIA 850 1270
+        VIA 1315 1270
+
+LINK sg9100-pas-sw-pas-s632
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92213
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92213&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94995.rrd
+        INCOMMENT GE7/1/4
+        OUTCOMMENT XG0/0/10
+        NODES sw-pas-s632 BR142PASDOR
+        VIA 1430 1720
+        VIA 920 1720
+
+LINK sg9100-pas-sw-pas-s632a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92213
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92213&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94995.rrd
+        INCOMMENT GE8/0/4
+        OUTCOMMENT XG0/0/11
+        NODES sw-pas-s632 BR142PASDOR
+        VIA 1430 1750
+        VIA 920 1750
+
+LINK sw-pas-s632-googlecdn_pasaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109743
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109743&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw167pasdor_traffic_in_112580.rrd
+        OUTCOMMENT XG0/0/9
+        NODES sw-pas-s632 googlecdn_pas
+        VIA 1529 1720
+        VIA 1822 1720
+        BANDWIDTH 7.66G
+
+LINK sw-tun-s632-sg9100-tun
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92207
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92207&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94989.rrd
+        INCOMMENT GE1/1/3
+        OUTCOMMENT XGE0/0/9
+        NODES sw-tun-s632 BR142TUNDOR
+        VIA 1420 550
+        VIA 920 550
+
+LINK sw-tun-s632-googlecdn
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92205
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92205&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_by_tun_1_traffic_in_94987.rrd
+        OUTCOMMENT XGE0/0/7
+        NODES sw-tun-s632:0:0 googlecdntun:20:-10
+        VIA 1500 550
+        VIA 1770 550
+        BANDWIDTH 7.66G
+
+LINK globenet_tun-sw-tun-s632
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91437
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91437&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 5
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94218.rrd
+        INCOMMENT GE1/0/3
+        NODES globenet_tun BR142TUNDOR
+        VIA 1810 320
+        VIA 940 320
+
+LINK globenet_tun-sw-tun-s632a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91433
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91433&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 5
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_94214.rrd
+        INCOMMENT GE2/0/3
+        NODES globenet_tun:0:0 BR142TUNDOR
+        VIA 1810 350
+        VIA 940 350
+
+LINK sw-nev-s632-NE40_NEV_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92466
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92466&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_95220.rrd
+        INCOMMENT GE1/1/3
+        NODES century_nev NE40_NEV_2
+        VIA 1830 890
+        VIA 915 890
+        VIA 915 950
+
+LINK NE40_PAS_2-CX600_PAS_1aaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91496
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91496&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_94277.rrd
+        INCOMMENT GE1/0/0
+        OUTCOMMENT 0/0/0/3
+        NODES PE165PASDOR BR142PASDOR:0:-45
+        VIA 500 1525
+        VIA 760 1525
+
+LINK NE40_PAS_1-CX600_PAS_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=89913
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=89913&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_92717.rrd
+        INCOMMENT 0/0/0/1
+        OUTCOMMENT GE0/1/2
+        NODES RP142PASDOR:0:-45 PE165PASDOR
+        VIA 130 1525
+        VIA 370 1525
+
+LINK NE40_PAS_1-CX600_PAS_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=89923
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=89923&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_92727.rrd
+        INCOMMENT 0/0/1/1
+        OUTCOMMENT GE0/4/2
+        NODES RP142PASDOR:0:45 PE165PASDOR
+        VIA 130 1675
+        VIA 370 1675
+
+LINK CX600_NEV_1-NE40_NEV_1_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97241
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97241&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99991.rrd
+        INCOMMENT 0/0/0/10
+        OUTCOMMENT 0/1/0/30
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 795
+        VIA 380 795
+
+LINK CX600_NEV_1-NE40_NEV_1_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97243
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97243&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 31
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99993.rrd
+        INCOMMENT 0/0/1/2
+        OUTCOMMENT 0/1/0/31
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 825
+        VIA 380 825
+
+LINK CX600_NEV_1-NE40_NEV_1aaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111533
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111533&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114386.rrd
+        INCOMMENT 0/2/0/7
+        OUTCOMMENT 0/6/0/31
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 975
+        VIA 380 975
+
+LINK NE40_NEV_2-CX600_NEV_1_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97244
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97244&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 31
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99994.rrd
+        INCOMMENT GE1/1/4
+        OUTCOMMENT 0/0/1/3
+        NODES PE165NEVDOR NE40_NEV_2:0:0
+        VIA 520 825
+        VIA 780 825
+
+LINK NE40_NEV_2-CX600_NEV_1_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97250
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97250&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 32
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_100000.rrd
+        INCOMMENT GE2/1/3
+        OUTCOMMENT 0/0/1/10
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 795
+        VIA 780 795
+
+LINK NE40_NEV_2-CX600_NEV_1aaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97239
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97239&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99989.rrd
+        INCOMMENT GE2/0/1
+        OUTCOMMENT 0/0/0/8
+        NODES PE165NEVDOR NE40_NEV_2:0:0
+        VIA 520 975
+        VIA 780 975
+
+LINK CX600_NEV_1-NE40_NEV_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97248
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97248&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99998.rrd
+        INCOMMENT GE2/1/4
+        OUTCOMMENT 0/0/1/7
+        NODES PE165NEVDOR NE40_NEV_2
+        VIA 520 1055
+        VIA 780 1055
+
+LINK sg9100-nev-NE40_NEV_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91481
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91481&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94262.rrd
+        INCOMMENT GE1/0/2
+        NODES century_nev NE40_NEV_2
+        VIA 1830 920
+        VIA 915 920
+        VIA 915 950
+
+LINK iris-sw-nev-s632
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92694
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92694&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_95448.rrd
+        INCOMMENT XG0/0/7
+        OUTCOMMENT enp3s0f
+        NODES iris sw-nev-s632:90:0
+        VIA 1846 1050
+        VIA 1560 1050
+
+LINK iris-sw-nev-s632a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92693
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92693&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_95447.rrd
+        INCOMMENT XG0/0/6
+        OUTCOMMENT enp2s0f
+        NODES iris sw-nev-s632:90:0
+        VIA 1846 1020
+        VIA 1560 1020
+
+LINK PE165PASDOR-NE40_PAS_1
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92668
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92668&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95422.rrd
+        INCOMMENT 0/0/0/8
+        OUTCOMMENT GE0/1/7
+        NODES RP142PASDOR:0:45 PE165PASDOR
+        VIA 130 1705
+        VIA 370 1705
+
+LINK PE165PASDOR-NE40_PAS_1a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92669
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92669&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95423.rrd
+        INCOMMENT 0/0/1/8
+        OUTCOMMENT GE0/2/7
+        NODES RP142PASDOR:0:-45 PE165PASDOR
+        VIA 130 1495
+        VIA 370 1495
+
+LINK NE40_PAS_2-PE165PASDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92749
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92749&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95503.rrd
+        INCOMMENT GE7/0/4
+        OUTCOMMENT 0/0/0/9
+        NODES PE165PASDOR BR142PASDOR:0:45
+        VIA 500 1705
+        VIA 780 1705
+
+LINK NE40_PAS_2-facebook_pas
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92750
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92750&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95504.rrd
+        INCOMMENT Pto3
+        OUTCOMMENT GE1/1/1
+        NODES BR142PASDOR:20:0 facebook_pas:0:15
+        VIA 870 1845
+        VIA 1809 1845
+
+LINK NE40_PAS_2-PE165PASDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92748
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92748&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95502.rrd
+        INCOMMENT GE1/0/4
+        OUTCOMMENT 0/0/1/9
+        NODES PE165PASDOR BR142PASDOR:0:45
+        VIA 500 1675
+        VIA 780 1675
+
+LINK NE40_NEV_1-PE165NEVDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97240
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97240&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99990.rrd
+        INCOMMENT 0/0/0/9
+        OUTCOMMENT 0/1/0/29
+        NODES NE40_NEV_1:0:0 PE165NEVDOR
+        VIA 130 1025
+        VIA 380 1025
+
+LINK NE40_PAS_1-PE165PASDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92671
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92671&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95425.rrd
+        INCOMMENT 0/2/0/1
+        OUTCOMMENT GE0/3/7
+        NODES RP142PASDOR:0:25 PE165PASDOR
+        VIA 130 1735
+        VIA 370 1735
+
+LINK NE40_PAS_1-PE165PASDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92672
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92672&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95426.rrd
+        INCOMMENT 0/2/0/2
+        OUTCOMMENT GE0/4/7
+        NODES RP142PASDOR:0:-45 PE165PASDOR
+        VIA 130 1555
+        VIA 370 1555
+
+LINK NE40_PAS_1-PE165PASDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92489
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92489&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_1_traffic_in_95243.rrd
+        INCOMMENT 0/0/0/6
+        OUTCOMMENT GE0/1/6
+        NODES RP142PASDOR:0:-45 PE165PASDOR
+        VIA 130 1465
+        VIA 370 1465
+
+LINK NE40_PAS_2-PE165PASDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92919
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92919&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95673.rrd
+        INCOMMENT GE1/1/2
+        OUTCOMMENT 0/2/0/3
+        NODES PE165PASDOR BR142PASDOR:0:25
+        VIA 500 1735
+        VIA 780 1735
+
+LINK PE165PASDOR-NE40_PAS_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92920
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92920&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95674.rrd
+        INCOMMENT GE7/1/1
+        OUTCOMMENT 0/2/0/4
+        NODES PE165PASDOR BR142PASDOR:0:-45
+        VIA 500 1495
+        VIA 760 1495
+
+LINK PE165PASDOR-NE40_PAS_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=92421
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=92421&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_95195.rrd
+        INCOMMENT GE8/0/3
+        OUTCOMMENT 0/0/0/7
+        NODES PE165PASDOR BR142PASDOR:0:-45
+        VIA 500 1465
+        VIA 760 1465
+
+LINK NE40_TUN_1-PE165TUNDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109589
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109589&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112422.rrd
+        INCOMMENT 0/0/0/2
+        OUTCOMMENT 25GE2/0/9
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 295
+        VIA 380 295
+
+LINK NE40_TUN_1-PE165TUNDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109590
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109590&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112423.rrd
+        INCOMMENT 0/0/0/3
+        OUTCOMMENT 25GE2/0/10
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 265
+        VIA 380 265
+
+LINK NE40_TUN_1-PE165TUNDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109591
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109591&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112424.rrd
+        INCOMMENT 0/0/0/4
+        OUTCOMMENT 25GE2/0/11
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 505
+        VIA 380 505
+
+LINK NE40_TUN_1-PE165TUNDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109556
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109556&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112389.rrd
+        INCOMMENT 0/0/0/1
+        OUTCOMMENT 25GE1/0/15
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 535
+        VIA 380 535
+
+LINK NE40_TUN_2-PE165TUNDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=94108
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=94108&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_96842.rrd
+        INCOMMENT 0/0/1/1
+        OUTCOMMENT GE 4/0/3
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 295
+        VIA 500 295
+
+LINK NE40_TUN_2-PE165TUNDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=94109
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=94109&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_96843.rrd
+        INCOMMENT 0/0/1/2
+        OUTCOMMENT GE 4/0/4
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 265
+        VIA 500 265
+
+LINK NE40_TUN_2-PE165TUNDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=94110
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=94110&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_96844.rrd
+        INCOMMENT 0/0/1/3
+        OUTCOMMENT GE 4/1/0
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 505
+        VIA 500 505
+
+LINK NE40_TUN_2-PE165TUNDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=94115
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=94115&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_96849.rrd
+        INCOMMENT 0/0/1/4
+        OUTCOMMENT GE 4/1/1
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 535
+        VIA 500 535
+
+LINK NE40_NEV_1-PE165NEVDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108118
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108118&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110936.rrd
+        INCOMMENT 0/2/1/2
+        OUTCOMMENT 0/1/0/34
+        NODES NE40_NEV_1 PE165NEVDOR
+        VIA 130 1055
+        VIA 380 1055
+
+LINK PE165NEVDOR-NE40_NEV_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97238
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97238&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99988.rrd
+        INCOMMENT GE1/0/1
+        OUTCOMMENT 0/0/0/7
+        NODES PE165NEVDOR NE40_NEV_2
+        VIA 520 945
+        VIA 780 945
+
+LINK PE165NEVDOR-NE40_NEV_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97235
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97235&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99985.rrd
+        INCOMMENT GE1/0/3
+        OUTCOMMENT 0/0/0/4
+        NODES PE165NEVDOR NE40_NEV_2
+        VIA 520 915
+        VIA 780 915
+
+LINK sw-nev-s632-NE40_NEV_2a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91483
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91483&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94264.rrd
+        INCOMMENT XG0/0/47
+        OUTCOMMENT GE1/1/1
+        NODES NE40_NEV_2:20:0 sw-nev-s632
+        VIA 870 1090
+        VIA 930 1090
+        VIA 930 1090
+        VIA 1320 1090
+        VIA 1320 1080
+
+LINK NE40_NEV_1-PE165NEVDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97237
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97237&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 34
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99987.rrd
+        INCOMMENT 0/0/0/6
+        OUTCOMMENT 0/1/0/28
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 765
+        VIA 380 765
+
+LINK NE40_NEV_1-PE165NEVDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97234
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97234&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99984.rrd
+        INCOMMENT 0/0/0/3
+        OUTCOMMENT 0/1/0/27
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 735
+        VIA 380 735
+
+LINK NE40_NEV_1-PE165NEVDORaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108120
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108120&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110938.rrd
+        INCOMMENT 0/2/1/4
+        OUTCOMMENT 0/1/0/35
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1085
+        VIA 380 1085
+
+LINK PE165NEVDOR-NE40_NEV_2aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97262
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97262&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_100012.rrd
+        INCOMMENT GE5/0/0
+        OUTCOMMENT 0/2/0/4
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 765
+        VIA 780 765
+
+LINK PE165NEVDOR-NE40_NEV_2aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97263
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97263&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_100013.rrd
+        INCOMMENT GE5/0/1
+        OUTCOMMENT 0/2/0/5
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 735
+        VIA 780 735
+
+LINK PE165NEVDOR-NE40_NEV_2aaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97264
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97264&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_100014.rrd
+        INCOMMENT GE5/0/2
+        OUTCOMMENT 0/2/0/6
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1085
+        VIA 780 1085
+
+LINK NE40_TUN_1-PE165TUNDORaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109592
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109592&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112425.rrd
+        INCOMMENT 0/2/0/9
+        OUTCOMMENT 25GE2/0/12
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 235
+        VIA 380 235
+
+LINK NE40_TUN_1-PE165TUNDORaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109593
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109593&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112426.rrd
+        INCOMMENT 0/2/0/10
+        OUTCOMMENT 25GE2/0/13
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 565
+        VIA 380 565
+
+LINK NE40_TUN_2-PE165TUNDORaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98051
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98051&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_100804.rrd
+        INCOMMENT 0/2/1/9
+        OUTCOMMENT GE 5/0/3
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 235
+        VIA 500 235
+
+LINK NE40_TUN_2-PE165TUNDORaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98052
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98052&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 45
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_100805.rrd
+        INCOMMENT 0/2/1/10
+        OUTCOMMENT GE 5/0/4
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 565
+        VIA 500 565
+
+LINK NE40_TUN_2-PE165TUNDORaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98050
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98050&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 45
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_100803.rrd
+        INCOMMENT 0/2/1/8
+        OUTCOMMENT GE 5/0/2
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 595
+        VIA 500 595
+
+LINK NE40_NEV_2-sw-nev-s632
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98640
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98640&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_101395.rrd
+        INCOMMENT GE5/1/0
+        NODES century_nev NE40_NEV_2
+        VIA 1830 860
+        VIA 915 860
+        VIA 915 950
+
+LINK NE40_TUN_2-facebookaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98945
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98945&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        BWLABELPOS 65 35
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_101704.rrd
+        INCOMMENT 0/0/5
+        OUTCOMMENT GE5/0/0
+        NODES BR142TUNDOR:20:15 facebook:-50:20
+        VIA 870 240
+        VIA 1815 240
+
+LINK NE40_TUN_2-facebookaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109689
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109689&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        BWLABELPOS 65 35
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_112526.rrd
+        INCOMMENT 0/0/6
+        OUTCOMMENT GE5/1/0
+        NODES BR142TUNDOR:20:15 facebook:-50:20
+        VIA 870 270
+        VIA 1815 270
+
+LINK NE40_PAS_2-facebook_pasa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=98999
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=98999&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_101758.rrd
+        INCOMMENT Pto4
+        OUTCOMMENT GE5/0/0
+        NODES BR142PASDOR:20:0 facebook_pas:0:15
+        VIA 870 1875
+        VIA 1809 1875
+
+LINK NE40_PAS_2-facebook_pasaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=99000
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=99000&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_101759.rrd
+        INCOMMENT Pto5
+        OUTCOMMENT GE5/0/1
+        NODES BR142PASDOR:20:0 facebook_pas:0:15
+        VIA 870 1905
+        VIA 1809 1905
+
+LINK NE40_TUN_1-PE165TUNDORaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109594
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109594&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112427.rrd
+        INCOMMENT 0/2/0/3
+        OUTCOMMENT 25GE2/0/14
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 205
+        VIA 380 205
+
+LINK NE40_TUN_1-PE165TUNDORaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109595
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109595&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/rp180tundor_traffic_in_112428.rrd
+        INCOMMENT 0/2/1/3
+        OUTCOMMENT 25GE2/0/15
+        NODES NE40_TUN_1 PE165TUNDOR
+        VIA 150 595
+        VIA 380 595
+
+LINK PE165TUNDOR-NE40_TUN_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=99003
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=99003&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 35
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_101762.rrd
+        INCOMMENT GE 1/1/4
+        OUTCOMMENT 0/2/0/4
+        NODES PE165TUNDOR BR142TUNDOR
+        VIA 500 205
+        VIA 800 205
+
+LINK NE40_TUN_2-PE165TUNDORaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=99004
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=99004&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 45
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_101763.rrd
+        INCOMMENT 0/2/1/1
+        OUTCOMMENT GE 5/0/1
+        NODES BR142TUNDOR PE165TUNDOR
+        VIA 800 175
+        VIA 500 175
+
+LINK NE40_NEV_1-PE165NEVDORaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97233
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97233&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99983.rrd
+        INCOMMENT 0/0/0/2
+        OUTCOMMENT 0/1/0/26
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 705
+        VIA 380 705
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111546
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111546&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114399.rrd
+        INCOMMENT 0/3/0/1
+        OUTCOMMENT 0/1/0/42
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1115
+        VIA 380 1115
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=99515
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=99515&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_102276.rrd
+        INCOMMENT GE5/0/4
+        OUTCOMMENT 0/2/0/9
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 705
+        VIA 780 705
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=99516
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=99516&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_102277.rrd
+        INCOMMENT GE5/1/1
+        OUTCOMMENT 0/2/0/10
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1115
+        VIA 780 1115
+
+LINK NE40_NEV_2-sw-nev-s632a
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=91479
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=91479&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_94260.rrd
+        INCOMMENT XG0/0/41
+        OUTCOMMENT GE1/0/0
+        NODES NE40_NEV_2:20:0 sw-nev-s632
+        VIA 870 1090
+        VIA 930 1090
+        VIA 930 1030
+        VIA 1320 1030
+        VIA 1320 1080
+
+LINK NE40_NEV_2-sw-nev-s632aa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=95981
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=95981&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_hu_nev_2_traffic_in_98725.rrd
+        INCOMMENT XG0/0/42
+        OUTCOMMENT GE2/1/2
+        NODES NE40_NEV_2:20:0 sw-nev-s632
+        VIA 870 1090
+        VIA 930 1090
+        VIA 930 1060
+        VIA 1320 1060
+        VIA 1320 1080
+
+LINK sw-nev-s632-googlecdn_nev
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=107979
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=107979&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 95 30
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_110797.rrd
+        OUTCOMMENT XG0/0/39
+        NODES sw-nev-s632:90:0 googlecdn_nev:0:20
+        VIA 1560 1180
+        VIA 1850 1180
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111547
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111547&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114400.rrd
+        INCOMMENT 0/3/0/2
+        OUTCOMMENT 0/1/0/43
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1145
+        VIA 380 1145
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111548
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111548&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114401.rrd
+        INCOMMENT 0/3/0/3
+        OUTCOMMENT 0/1/0/44
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1175
+        VIA 380 1175
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108117
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108117&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 33
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110935.rrd
+        INCOMMENT GE5/1/2
+        OUTCOMMENT 0/2/1/1
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1145
+        VIA 780 1145
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108119
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108119&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 34
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110937.rrd
+        INCOMMENT GE5/1/3
+        OUTCOMMENT 0/2/1/3
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1175
+        VIA 780 1175
+
+LINK NE40_NEV_2-sw-nev-s632aaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108123
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108123&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_110941.rrd
+        INCOMMENT XG0/0/40
+        OUTCOMMENT GE5/1/4
+        NODES NE40_NEV_2:20:0 sw-nev-s632
+        VIA 870 1090
+        VIA 930 1090
+        VIA 930 1150
+        VIA 1320 1150
+        VIA 1320 1080
+
+LINK sw-nev-s632-node02698
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108301
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108301&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_111119.rrd
+        INCOMMENT Pto7
+        OUTCOMMENT XG0/0/35
+        NODES sw-nev-s632:70:0 node02698
+        VIA 1540 1240
+
+LINK sw-nev-s632-node02698a
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108302
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108302&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_111120.rrd
+        INCOMMENT Pto6
+        OUTCOMMENT XG0/0/36
+        NODES sw-nev-s632:70:0 node02698
+        VIA 1540 1270
+        VIA 1850 1270
+
+LINK sw-nev-s632-node02698aa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108303
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108303&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_111121.rrd
+        INCOMMENT Pto5
+        OUTCOMMENT XG0/0/37
+        NODES sw-nev-s632:70:0 node02698
+        VIA 1540 1300
+        VIA 1850 1300
+
+LINK sw-nev-s632-node02698aaa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108304
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108304&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/sw_hw_s632_hu_nev_1_traffic_in_111122.rrd
+        INCOMMENT Pto4
+        OUTCOMMENT XG0/0/38
+        NODES sw-nev-s632:70:0 node02698
+        VIA 1540 1330
+        VIA 1850 1330
+
+LINK NE40_PAS_2-cirion_pas
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109015
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109015&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_111835.rrd
+        INCOMMENT Pto1
+        OUTCOMMENT GE1/1/3
+        NODES BR142PASDOR:20:0 cirion_pas:0:-10
+        VIA 870 1490
+
+LINK NE40_PAS_2-cirion_pasa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109017
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109017&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_111837.rrd
+        INCOMMENT Pto2
+        OUTCOMMENT GE5/0/2
+        NODES BR142PASDOR:20:0 cirion_pas:0:20
+        VIA 870 1520
+
+LINK NE40_PAS_2-cirion_pasaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109016
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109016&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 70 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_111836.rrd
+        INCOMMENT Pto3
+        OUTCOMMENT GE7/1/2
+        NODES BR142PASDOR:20:0 cirion_pas:0:0
+        VIA 870 1460
+        VIA 1800 1460
+
+LINK NE40_NEV_2-facebook_NEV
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109133
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109133&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_111958.rrd
+        INCOMMENT Pto5
+        OUTCOMMENT GE7/1/0
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1330
+        VIA 1315 1330
+
+LINK NE40_NEV_2-facebook_NEVa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109134
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109134&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_111959.rrd
+        INCOMMENT Pto6
+        OUTCOMMENT GE7/1/1
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1360
+        VIA 1315 1360
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111549
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111549&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114402.rrd
+        INCOMMENT 0/3/0/4
+        OUTCOMMENT 0/1/0/45
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1205
+        VIA 380 1205
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=97249
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=97249&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_99999.rrd
+        INCOMMENT 0/0/1/9
+        OUTCOMMENT 0/6/0/27
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1235
+        VIA 380 1235
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111532
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111532&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114385.rrd
+        INCOMMENT 0/2/0/3
+        OUTCOMMENT 0/6/0/30
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1265
+        VIA 380 1265
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=108116
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=108116&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_110934.rrd
+        INCOMMENT 0/2/0/8
+        OUTCOMMENT 0/6/0/32
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1295
+        VIA 380 1295
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111550
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111550&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 34
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114403.rrd
+        INCOMMENT GE7/0/0
+        OUTCOMMENT 0/3/0/5
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1205
+        VIA 780 1205
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111551
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111551&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 34
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114404.rrd
+        INCOMMENT GE7/0/1
+        OUTCOMMENT 0/3/0/6
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1235
+        VIA 780 1235
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111552
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111552&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114405.rrd
+        INCOMMENT GE7/0/2
+        OUTCOMMENT 0/3/0/7
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1265
+        VIA 780 1265
+
+LINK PE165NEVDOR-NE40_NEV_2aaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111553
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111553&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114406.rrd
+        INCOMMENT GE7/0/3
+        OUTCOMMENT 0/3/0/8
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1295
+        VIA 780 1295
+
+LINK NE40_NEV_2-facebook_NEVaa
+        VIASTYLE angled
+        SPLITPOS 70
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109248
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109248&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 50
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_112075.rrd
+        INCOMMENT Pto7
+        OUTCOMMENT GE7/1/2
+        NODES NE40_NEV_2 facebook_NEV:0:20
+        VIA 850 1390
+        VIA 1315 1390
+
+LINK globenet_tun-NE40_TUN_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=109304
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=109304&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 80 5
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_by_tun_2_traffic_in_112135.rrd
+        INCOMMENT GE4/1/2
+        NODES globenet_tun BR142TUNDOR
+        VIA 1810 380
+        VIA 940 380
+
+LINK NE40_PAS_2-PE165PASDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110682
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110682&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_113523.rrd
+        INCOMMENT GE5/0/3
+        OUTCOMMENT 0/3/0/4
+        NODES PE165PASDOR BR142PASDOR:0:25
+        VIA 500 1765
+        VIA 780 1765
+
+LINK NE40_PAS_2-PE165PASDORaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110681
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110681&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_113522.rrd
+        INCOMMENT GE7/1/3
+        OUTCOMMENT 0/3/1/1
+        NODES PE165PASDOR BR142PASDOR:0:25
+        VIA 500 1795
+        VIA 780 1795
+
+LINK NE40_PAS_2-PE165PASDORaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110683
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110683&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/cr_hw_ne40_nr_pas_2_traffic_in_113524.rrd
+        INCOMMENT GE5/1/4
+        OUTCOMMENT 0/3/1/3
+        NODES PE165PASDOR BR142PASDOR:0:25
+        VIA 500 1825
+        VIA 780 1825
+
+LINK NE40_PAS_1-PE165PASDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110684
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110684&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp142pasdor_traffic_in_113525.rrd
+        INCOMMENT 0/3/0/1
+        OUTCOMMENT GE0/5/9
+        NODES RP142PASDOR:0:25 PE165PASDOR
+        VIA 130 1765
+        VIA 370 1765
+
+LINK NE40_PAS_1-PE165PASDORaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110685
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110685&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 30
+        TARGET /var/www/html/cacti/rra/rp142pasdor_traffic_in_113526.rrd
+        INCOMMENT 0/3/0/3
+        OUTCOMMENT GE0/6/2
+        NODES RP142PASDOR:0:25 PE165PASDOR
+        VIA 130 1795
+        VIA 370 1795
+
+LINK NE40_PAS_1-PE165PASDORaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110686
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110686&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/rp142pasdor_traffic_in_113527.rrd
+        INCOMMENT 0/3/1/2
+        OUTCOMMENT GE0/6/3
+        NODES RP142PASDOR:0:25 PE165PASDOR
+        VIA 130 1825
+        VIA 370 1825
+
+LINK NE40_PAS_1-PE165PASDORaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110687
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110687&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/rp142pasdor_traffic_in_113528.rrd
+        INCOMMENT 0/3/1/4
+        OUTCOMMENT GE0/6/4
+        NODES RP142PASDOR:0:25 PE165PASDOR
+        VIA 130 1855
+        VIA 370 1855
+
+LINK NE40_NEV_2-PE165NEVDOR
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110690
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110690&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_113531.rrd
+        INCOMMENT GE7/0/4
+        OUTCOMMENT 0/4/1/1
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1325
+        VIA 780 1325
+
+LINK NE40_NEV_2-PE165NEVDORa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110691
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110691&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_113532.rrd
+        INCOMMENT GE7/1/3
+        OUTCOMMENT 0/4/0/4
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 1355
+        VIA 780 1355
+
+LINK NE40_NEV_2-PE165NEVDORaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110688
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110688&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 36
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_113529.rrd
+        INCOMMENT GE6/0/0
+        OUTCOMMENT 0/2/1/10
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 675
+        VIA 780 675
+
+LINK NE40_NEV_2-PE165NEVDORaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=110689
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=110689&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_113530.rrd
+        INCOMMENT GE6/1/0
+        OUTCOMMENT 0/3/0/9
+        NODES PE165NEVDOR NE40_NEV_2:10:0
+        VIA 520 645
+        VIA 780 645
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111537
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111537&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114390.rrd
+        INCOMMENT 0/2/1/8
+        OUTCOMMENT 0/1/0/40
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1325
+        VIA 380 1325
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111555
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111555&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114408.rrd
+        INCOMMENT 0/3/0/10
+        OUTCOMMENT 0/6/0/40
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 1355
+        VIA 380 1355
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111541
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111541&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114394.rrd
+        INCOMMENT 0/4/0/3
+        OUTCOMMENT 0/6/0/39
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 675
+        VIA 380 675
+
+LINK NE40_NEV_1-PE165NEVDORaaaaaaaaaaaaaaaa
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111545
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111545&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        COMMENTPOS 60 40
+        TARGET /var/www/html/cacti/rra/pe165nevdor_traffic_in_114398.rrd
+        INCOMMENT 0/4/1/2
+        OUTCOMMENT 0/7/0/1
+        NODES NE40_NEV_1:0:0 PE165NEVDOR:0:0
+        VIA 130 645
+        VIA 380 645
+
+LINK speddtest-NE40_NEV_2
+        VIASTYLE angled
+        INFOURL /cacti/graph.php?rra_id=all&local_graph_id=111733
+        OVERLIBGRAPH /cacti/graph_image.php?local_graph_id=111733&rra_id=0&graph_nolegend=true&graph_height=100&graph_width=300
+        TARGET /var/www/html/cacti/rra/br161nevdor_traffic_in_114588.rrd
+        NODES speddtest NE40_NEV_2
+        VIA 890 820
+        VIA 890 930
