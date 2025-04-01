@@ -6,6 +6,9 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from reportlab.platypus import Table, TableStyle
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import SimpleDocTemplate, Table, TableStyle, Image, Spacer, Paragraph
+
 
 import matplotlib.pyplot as plt
 from io import BytesIO
@@ -60,7 +63,7 @@ def generar_grafico(actividades, plataformas, ruta_grafico):
         plt.bar(actividades.keys(), actividades.values(), color='skyblue')
         plt.title("Actividades realizadas")
         plt.xlabel("Actividad")
-        plt.ylabel("Frecuencia")
+        plt.ylabel("Gestiones")
         plt.xticks(rotation=45)
     
     # Convertir plataformas en Counter si no lo es
@@ -74,7 +77,7 @@ def generar_grafico(actividades, plataformas, ruta_grafico):
         plt.bar([p[0] for p in top_plataformas], [p[1] for p in top_plataformas], color='salmon')
         plt.title("Plataformas más mencionadas")
         plt.xlabel("Plataforma")
-        plt.ylabel("Frecuencia")
+        plt.ylabel("Gestiones")
         plt.xticks(rotation=45)
     
     # Guardar imagen
@@ -116,6 +119,13 @@ def generar_pdf(conteo_tks, actividades_clave, plataformas_mencionadas, ruta_gra
     # Crear documento PDF
     doc = SimpleDocTemplate(ruta_pdf, pagesize=letter)
     elements = []
+
+    # Estilo para el título
+    styles = getSampleStyleSheet()
+    title_style = styles["Title"]
+    title = Paragraph("Indicadores NOC-Ti", title_style)  # Usamos un párrafo para el título
+    elements.append(title)
+    elements.append(Spacer(1, 12))  # Espaciado debajo del título
 
     # Crear tabla con actividades clave
     data_actividades = [["Actividad", "Frecuencia"]] + list(actividades_clave.items())
